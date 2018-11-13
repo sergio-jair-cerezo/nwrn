@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let sideMenuVC = SideMenuVC(nibName: "SideMenuVC", bundle: nil) as SideMenuVC
+        sideMenuVC.currentMenuOption = SideMenuVC.MenuOption.swift
         
         let swiftFirstVC = SwiftFirstVC(nibName: "SwiftFirstVC", bundle: nil) as SwiftFirstVC
         self.mainNC = UINavigationController(rootViewController: swiftFirstVC)

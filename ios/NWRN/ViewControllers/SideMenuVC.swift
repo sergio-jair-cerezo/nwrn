@@ -14,7 +14,8 @@ class SideMenuVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var appDelegate: AppDelegate!
+    var currentMenuOption: MenuOption!
+    private var appDelegate: AppDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,13 @@ extension SideMenuVC: UITableViewDataSource {
 extension SideMenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedOption = SideMenuVC.menuOptions[indexPath.row]
+        
+        if selectedOption == self.currentMenuOption {
+            self.slideMenuController()?.closeLeft()
+            return
+        }
+        self.currentMenuOption = selectedOption
+        
         switch selectedOption {
         case .swift:
             let swiftFirstVC = SwiftFirstVC(nibName: "SwiftFirstVC", bundle: nil) as SwiftFirstVC
@@ -81,6 +89,13 @@ extension SideMenuVC: UITableViewDelegate {
             self.appDelegate.mainNC.setViewControllers([swiftToRNVC], animated: true)
         default: break;
         }
+        
+        if selectedOption == .react {
+            
+        }
+        
+        let hideNavBar = selectedOption == .react
+        self.appDelegate.mainNC.setNavigationBarHidden(hideNavBar, animated: false)
         
         self.slideMenuController()?.closeLeft()
     }
