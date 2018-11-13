@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenuVC" customModule="NWRN" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="KQm-TB-eLg" id="7kM-Vv-y4f"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3Td-75-aAb"/>
             </connections>
         </placeholder>
@@ -20,21 +21,42 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1V-kS-3oK">
-                    <rect key="frame" x="86.5" y="313" width="202.5" height="41"/>
-                    <string key="text">Side Menu View Controller
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0F-TT-iCo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1V-kS-3oK">
+                            <rect key="frame" x="86.5" y="39.5" width="202.5" height="41"/>
+                            <string key="text">Side Menu View Controller
 Swift made</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.8966219190140845" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="gmh-YD-mNA"/>
+                        <constraint firstItem="p1V-kS-3oK" firstAttribute="centerX" secondItem="M0F-TT-iCo" secondAttribute="centerX" id="hJF-44-J33"/>
+                        <constraint firstItem="p1V-kS-3oK" firstAttribute="centerY" secondItem="M0F-TT-iCo" secondAttribute="centerY" constant="10" id="meF-AI-yjb"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-TB-eLg">
+                    <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="p1V-kS-3oK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RA0-OT-gcH"/>
-                <constraint firstItem="p1V-kS-3oK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YK5-AO-BlY"/>
+                <constraint firstItem="KQm-TB-eLg" firstAttribute="top" secondItem="M0F-TT-iCo" secondAttribute="bottom" id="DMT-rd-ddk"/>
+                <constraint firstItem="M0F-TT-iCo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="GWu-6h-DEz"/>
+                <constraint firstItem="KQm-TB-eLg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HES-8P-haL"/>
+                <constraint firstItem="M0F-TT-iCo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c8v-W9-Joo"/>
+                <constraint firstItem="KQm-TB-eLg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jkW-ln-XyA"/>
+                <constraint firstItem="KQm-TB-eLg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nfI-rp-1Db"/>
+                <constraint firstItem="M0F-TT-iCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uOp-5S-VrK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
         </view>
     </objects>
 </document>

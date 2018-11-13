@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41215CC1219A50960074A06E /* SwiftMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC0219A50960074A06E /* SwiftMainVC.swift */; };
-		41215CC3219A50DA0074A06E /* SwiftMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC2219A50DA0074A06E /* SwiftMainVC.xib */; };
+		41215CC3219A50DA0074A06E /* SwiftFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC2219A50DA0074A06E /* SwiftFirstVC.xib */; };
 		41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC4219A51580074A06E /* SideMenuVC.swift */; };
 		41215CC7219A51750074A06E /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC6219A51750074A06E /* SideMenuVC.xib */; };
+		41215CC9219A62DD0074A06E /* SwiftSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC8219A62DD0074A06E /* SwiftSecondVC.swift */; };
+		41215CCB219A63210074A06E /* SwiftFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CCA219A63210074A06E /* SwiftFirstVC.swift */; };
+		41215CCD219A64680074A06E /* SwiftSecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CCC219A64680074A06E /* SwiftSecondVC.xib */; };
 		41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC588219A06BC0042F590 /* AppDelegate.swift */; };
 		41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC58F219A06BC0042F590 /* NWRN.xcdatamodeld */; };
 		41CCC593219A06BD0042F590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41CCC592219A06BD0042F590 /* Assets.xcassets */; };
@@ -41,10 +43,12 @@
 
 /* Begin PBXFileReference section */
 		4094567744518CED24E97503 /* Pods-NWRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.debug.xcconfig"; sourceTree = "<group>"; };
-		41215CC0219A50960074A06E /* SwiftMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMainVC.swift; sourceTree = "<group>"; };
-		41215CC2219A50DA0074A06E /* SwiftMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftMainVC.xib; sourceTree = "<group>"; };
+		41215CC2219A50DA0074A06E /* SwiftFirstVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftFirstVC.xib; sourceTree = "<group>"; };
 		41215CC4219A51580074A06E /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		41215CC6219A51750074A06E /* SideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
+		41215CC8219A62DD0074A06E /* SwiftSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSecondVC.swift; sourceTree = "<group>"; };
+		41215CCA219A63210074A06E /* SwiftFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFirstVC.swift; sourceTree = "<group>"; };
+		41215CCC219A64680074A06E /* SwiftSecondVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftSecondVC.xib; sourceTree = "<group>"; };
 		41CCC585219A06BC0042F590 /* NWRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CCC588219A06BC0042F590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41CCC590219A06BC0042F590 /* NWRN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NWRN.xcdatamodel; sourceTree = "<group>"; };
@@ -98,8 +102,9 @@
 		41215CBD219A50560074A06E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				41215CC0219A50960074A06E /* SwiftMainVC.swift */,
 				41215CC4219A51580074A06E /* SideMenuVC.swift */,
+				41215CCA219A63210074A06E /* SwiftFirstVC.swift */,
+				41215CC8219A62DD0074A06E /* SwiftSecondVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -115,8 +120,9 @@
 		41215CBF219A50620074A06E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				41215CC2219A50DA0074A06E /* SwiftMainVC.xib */,
+				41215CC2219A50DA0074A06E /* SwiftFirstVC.xib */,
 				41215CC6219A51750074A06E /* SideMenuVC.xib */,
+				41215CCC219A64680074A06E /* SwiftSecondVC.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,8 +314,9 @@
 			files = (
 				41CCC596219A06BD0042F590 /* LaunchScreen.storyboard in Resources */,
 				41CCC593219A06BD0042F590 /* Assets.xcassets in Resources */,
+				41215CCD219A64680074A06E /* SwiftSecondVC.xib in Resources */,
 				41215CC7219A51750074A06E /* SideMenuVC.xib in Resources */,
-				41215CC3219A50DA0074A06E /* SwiftMainVC.xib in Resources */,
+				41215CC3219A50DA0074A06E /* SwiftFirstVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +420,8 @@
 			files = (
 				41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */,
 				41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */,
-				41215CC1219A50960074A06E /* SwiftMainVC.swift in Sources */,
+				41215CCB219A63210074A06E /* SwiftFirstVC.swift in Sources */,
+				41215CC9219A62DD0074A06E /* SwiftSecondVC.swift in Sources */,
 				41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,7 +593,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V27VHW52A9;
 				INFOPLIST_FILE = NWRN/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -601,7 +612,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V27VHW52A9;
 				INFOPLIST_FILE = NWRN/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -618,7 +632,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V27VHW52A9;
 				INFOPLIST_FILE = NWRNTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRNTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -636,7 +654,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V27VHW52A9;
 				INFOPLIST_FILE = NWRNTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRNTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -653,7 +675,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V27VHW52A9;
 				INFOPLIST_FILE = NWRNUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRNUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -670,7 +696,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V27VHW52A9;
 				INFOPLIST_FILE = NWRNUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRNUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

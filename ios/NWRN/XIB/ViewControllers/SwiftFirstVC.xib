@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwiftMainVC" customModule="NWRN" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwiftFirstVC" customModule="NWRN" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="Dpv-sR-DB4"/>
             </connections>
@@ -21,18 +21,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chh-0f-5rs">
-                    <rect key="frame" x="108.5" y="313" width="158" height="41"/>
-                    <string key="text">Main View Controller
+                    <rect key="frame" x="110.5" y="313" width="154.5" height="41"/>
+                    <string key="text">First View Controller
 Swift made</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eee-A2-JOL">
+                    <rect key="frame" x="128.5" y="362" width="118" height="30"/>
+                    <state key="normal" title="Go to Second VC"/>
+                    <connections>
+                        <action selector="goToSecondVCTapped:" destination="-1" eventType="touchUpInside" id="WKS-9Y-LuH"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Chh-0f-5rs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KnU-yF-JZn"/>
+                <constraint firstItem="Eee-A2-JOL" firstAttribute="top" secondItem="Chh-0f-5rs" secondAttribute="bottom" constant="8" id="Lbr-V1-Eiz"/>
                 <constraint firstItem="Chh-0f-5rs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eVQ-vF-Nqx"/>
+                <constraint firstItem="Eee-A2-JOL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="j61-p1-ONL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="130.40000000000001" y="152.47376311844079"/>
