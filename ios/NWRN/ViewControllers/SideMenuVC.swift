@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import React
 
 class SideMenuVC: UIViewController {
     
@@ -52,6 +53,29 @@ extension SideMenuVC: UITableViewDelegate {
         case .swift:
             let swiftFirstVC = SwiftFirstVC(nibName: "SwiftFirstVC", bundle: nil) as SwiftFirstVC
             self.appDelegate.mainNC.setViewControllers([swiftFirstVC], animated: true)
+        case .react:
+            //Suggested by official documentation
+            //let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
+            
+            //Code from original RN project
+            let jsCodeLocation = RCTBundleURLProvider.sharedSettings()?.jsBundleURL(forBundleRoot: "index", fallbackResource: "")
+            
+            let mockData:NSDictionary = ["scores":
+                [
+                    ["name":"Alex", "value":"42"],
+                    ["name":"Joel", "value":"10"]
+                ]
+            ]
+            
+            let rootView = RCTRootView(
+                bundleURL: jsCodeLocation,
+                moduleName: "nwrn",
+                initialProperties: mockData as [NSObject : AnyObject],
+                launchOptions: nil
+            )
+            let vc = UIViewController()
+            vc.view = rootView
+            self.appDelegate.mainNC.setViewControllers([vc], animated: true)
         case .swiftToRN:
             let swiftToRNVC = SwiftToRNVC(nibName: "SwiftToRNVC", bundle: nil) as SwiftToRNVC
             self.appDelegate.mainNC.setViewControllers([swiftToRNVC], animated: true)
