@@ -13,6 +13,8 @@
 		41215CC9219A62DD0074A06E /* SwiftSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC8219A62DD0074A06E /* SwiftSecondVC.swift */; };
 		41215CCB219A63210074A06E /* SwiftFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CCA219A63210074A06E /* SwiftFirstVC.swift */; };
 		41215CCD219A64680074A06E /* SwiftSecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CCC219A64680074A06E /* SwiftSecondVC.xib */; };
+		41215CCF219A6AFF0074A06E /* SwiftToRNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CCE219A6AFF0074A06E /* SwiftToRNVC.swift */; };
+		41215CD1219A6B8E0074A06E /* SwiftToRNVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CD0219A6B8E0074A06E /* SwiftToRNVC.xib */; };
 		41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC588219A06BC0042F590 /* AppDelegate.swift */; };
 		41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC58F219A06BC0042F590 /* NWRN.xcdatamodeld */; };
 		41CCC593219A06BD0042F590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41CCC592219A06BD0042F590 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		41215CC8219A62DD0074A06E /* SwiftSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSecondVC.swift; sourceTree = "<group>"; };
 		41215CCA219A63210074A06E /* SwiftFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFirstVC.swift; sourceTree = "<group>"; };
 		41215CCC219A64680074A06E /* SwiftSecondVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftSecondVC.xib; sourceTree = "<group>"; };
+		41215CCE219A6AFF0074A06E /* SwiftToRNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftToRNVC.swift; sourceTree = "<group>"; };
+		41215CD0219A6B8E0074A06E /* SwiftToRNVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftToRNVC.xib; sourceTree = "<group>"; };
 		41CCC585219A06BC0042F590 /* NWRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CCC588219A06BC0042F590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41CCC590219A06BC0042F590 /* NWRN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NWRN.xcdatamodel; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				41215CC4219A51580074A06E /* SideMenuVC.swift */,
 				41215CCA219A63210074A06E /* SwiftFirstVC.swift */,
 				41215CC8219A62DD0074A06E /* SwiftSecondVC.swift */,
+				41215CCE219A6AFF0074A06E /* SwiftToRNVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				41215CC2219A50DA0074A06E /* SwiftFirstVC.xib */,
 				41215CC6219A51750074A06E /* SideMenuVC.xib */,
 				41215CCC219A64680074A06E /* SwiftSecondVC.xib */,
+				41215CD0219A6B8E0074A06E /* SwiftToRNVC.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				41CCC596219A06BD0042F590 /* LaunchScreen.storyboard in Resources */,
 				41CCC593219A06BD0042F590 /* Assets.xcassets in Resources */,
 				41215CCD219A64680074A06E /* SwiftSecondVC.xib in Resources */,
+				41215CD1219A6B8E0074A06E /* SwiftToRNVC.xib in Resources */,
 				41215CC7219A51750074A06E /* SideMenuVC.xib in Resources */,
 				41215CC3219A50DA0074A06E /* SwiftFirstVC.xib in Resources */,
 			);
@@ -421,6 +428,7 @@
 				41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */,
 				41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */,
 				41215CCB219A63210074A06E /* SwiftFirstVC.swift in Sources */,
+				41215CCF219A6AFF0074A06E /* SwiftToRNVC.swift in Sources */,
 				41215CC9219A62DD0074A06E /* SwiftSecondVC.swift in Sources */,
 				41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */,
 			);

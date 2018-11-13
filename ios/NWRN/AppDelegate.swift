@@ -14,13 +14,13 @@ import SlideMenuControllerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var mainNC: UINavigationController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let sideMenuVC = SideMenuVC(nibName: "SideMenuVC", bundle: nil) as SideMenuVC
         
-        let swiftMainVC = SwiftFirstVC(nibName: "SwiftFirstVC", bundle: nil) as SwiftFirstVC
-        let mainNC = UINavigationController(rootViewController: swiftMainVC)
+        let swiftFirstVC = SwiftFirstVC(nibName: "SwiftFirstVC", bundle: nil) as SwiftFirstVC
+        self.mainNC = UINavigationController(rootViewController: swiftFirstVC)
         
         let slideMenuController = SlideMenuController(mainViewController: mainNC,
                                                       leftMenuViewController: sideMenuVC)

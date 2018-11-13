@@ -13,19 +13,24 @@ class SideMenuVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var appDelegate: AppDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
         self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     enum MenuOption: String {
         case swift = "Swift"
         case react = "React"
-        case swiftToReact = "Swift to React"
-        case reactToSwift = "React to Swift"
+        case swiftToRN = "Swift to React"
+        case rnToSwift = "React to Swift"
     }
-    static let menuOptions: [MenuOption] = [.swift, .react, .swiftToReact, .reactToSwift]
+    static let menuOptions: [MenuOption] = [.swift, .react, .swiftToRN, .rnToSwift]
 }
 
 extension SideMenuVC: UITableViewDataSource {
@@ -37,5 +42,22 @@ extension SideMenuVC: UITableViewDataSource {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "menu cell")
         cell.textLabel!.text = SideMenuVC.menuOptions[indexPath.row].rawValue
         return cell
+    }
+}
+
+extension SideMenuVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedOption = SideMenuVC.menuOptions[indexPath.row]
+        switch selectedOption {
+        case .swift:
+            let swiftFirstVC = SwiftFirstVC(nibName: "SwiftFirstVC", bundle: nil) as SwiftFirstVC
+            self.appDelegate.mainNC.setViewControllers([swiftFirstVC], animated: true)
+        case .swiftToRN:
+            let swiftToRNVC = SwiftToRNVC(nibName: "SwiftToRNVC", bundle: nil) as SwiftToRNVC
+            self.appDelegate.mainNC.setViewControllers([swiftToRNVC], animated: true)
+        default: break;
+        }
+        
+        self.slideMenuController()?.closeLeft()
     }
 }
