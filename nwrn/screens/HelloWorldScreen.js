@@ -7,7 +7,14 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button } from 'react-native';
+import { 
+  Platform, 
+  StyleSheet, 
+  Text, 
+  View, 
+  Button,
+  NativeModules
+} from 'react-native';
 import { Icon } from 'react-native-elements';
 
 const instructions = Platform.select({
@@ -24,7 +31,9 @@ export default class HelloWorldScreen extends Component {
 
   static navigationOptions = {
     title: 'First Screen',
-    headerLeft: <Icon name="menu" size={35} onPress={ () => navigation.navigate('DrawerOpen') } />
+    headerLeft: <Icon name="menu" size={35} onPress={ () => {
+      NativeModules.SideMenuExternalManager.openMenuFromJS();
+    }} />
   };
 
   render() {
