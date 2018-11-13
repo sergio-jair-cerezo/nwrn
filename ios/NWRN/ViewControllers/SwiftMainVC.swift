@@ -11,4 +11,16 @@ import UIKit
 
 class SwiftMainVC: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationItem.title = "Main"
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "bars-solid"), style: .plain,
+                                                                target: self, action: #selector(menuButtonTapped(sender:)))
+    }
+    
+    @objc func menuButtonTapped(sender: UIBarButtonItem) {
+        self.slideMenuController()?.openLeft()
+    }
 }

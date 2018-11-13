@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let sideMenuVC = SideMenuVC(nibName: "SideMenuVC", bundle: nil) as SideMenuVC
-        let swiftMainVC = SwiftMainVC(nibName: "SwiftMainVC", bundle: nil) as SwiftMainVC
         
-        let slideMenuController = SlideMenuController(mainViewController: swiftMainVC,
+        let swiftMainVC = SwiftMainVC(nibName: "SwiftMainVC", bundle: nil) as SwiftMainVC
+        let mainNC = UINavigationController(rootViewController: swiftMainVC)
+        
+        let slideMenuController = SlideMenuController(mainViewController: mainNC,
                                                       leftMenuViewController: sideMenuVC)
         self.window?.rootViewController = slideMenuController
         
