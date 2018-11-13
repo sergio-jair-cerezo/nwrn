@@ -3,7 +3,7 @@ platform :ios, '9.0'
 
 target 'NWRN' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+  #use_frameworks!
 
   # Pods for NWRN
   pod 'Alamofire', '~> 4.7'
@@ -33,6 +33,7 @@ target 'NWRN' do
   pod 'DoubleConversion', :podspec => '../nwrn/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../nwrn/node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../nwrn/node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'RNVectorIcons', :podspec => '../nwrn/node_modules/react-native-vector-icons/RNVectorIcons.podspec'
 
   target 'NWRNTests' do
     inherit! :search_paths

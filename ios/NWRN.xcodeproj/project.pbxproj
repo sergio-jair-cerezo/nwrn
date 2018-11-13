@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4D13CEC18D394F217C5604 /* libPods-NWRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D7A7DED6460D93D75847E6 /* libPods-NWRN.a */; };
 		41215CC3219A50DA0074A06E /* SwiftFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC2219A50DA0074A06E /* SwiftFirstVC.xib */; };
 		41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC4219A51580074A06E /* SideMenuVC.swift */; };
 		41215CC7219A51750074A06E /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC6219A51750074A06E /* SideMenuVC.xib */; };
@@ -21,9 +22,8 @@
 		41CCC596219A06BD0042F590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CCC594219A06BD0042F590 /* LaunchScreen.storyboard */; };
 		41CCC5A1219A06BD0042F590 /* NWRNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC5A0219A06BD0042F590 /* NWRNTests.swift */; };
 		41CCC5AC219A06BD0042F590 /* NWRNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC5AB219A06BD0042F590 /* NWRNUITests.swift */; };
-		8C8576415FD13C216DE883AD /* Pods_NWRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D503114139AA53A0B57B8B9B /* Pods_NWRNUITests.framework */; };
-		EA1ABCAEC62D33FA5E33380D /* Pods_NWRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489624DFEBEBF95BA25773E8 /* Pods_NWRN.framework */; };
-		EE44789684644EE2F5159B56 /* Pods_NWRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F081DE1B463EEE6C007AF /* Pods_NWRNTests.framework */; };
+		7CFA3539D2258F0E697F564B /* libPods-NWRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 375144BF1D8D5876C554017F /* libPods-NWRNTests.a */; };
+		C22058CD29D6F520CB496C55 /* libPods-NWRNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		375144BF1D8D5876C554017F /* libPods-NWRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NWRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4094567744518CED24E97503 /* Pods-NWRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.debug.xcconfig"; sourceTree = "<group>"; };
 		41215CC2219A50DA0074A06E /* SwiftFirstVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftFirstVC.xib; sourceTree = "<group>"; };
 		41215CC4219A51580074A06E /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		41215CCC219A64680074A06E /* SwiftSecondVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftSecondVC.xib; sourceTree = "<group>"; };
 		41215CCE219A6AFF0074A06E /* SwiftToRNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftToRNVC.swift; sourceTree = "<group>"; };
 		41215CD0219A6B8E0074A06E /* SwiftToRNVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftToRNVC.xib; sourceTree = "<group>"; };
+		412EF8BB219B6E0A00A72ECF /* NWRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NWRN-Bridging-Header.h"; sourceTree = "<group>"; };
 		41CCC585219A06BC0042F590 /* NWRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CCC588219A06BC0042F590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41CCC590219A06BC0042F590 /* NWRN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NWRN.xcdatamodel; sourceTree = "<group>"; };
@@ -65,14 +67,13 @@
 		41CCC5A7219A06BD0042F590 /* NWRNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NWRNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CCC5AB219A06BD0042F590 /* NWRNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWRNUITests.swift; sourceTree = "<group>"; };
 		41CCC5AD219A06BD0042F590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		489624DFEBEBF95BA25773E8 /* Pods_NWRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C6F081DE1B463EEE6C007AF /* Pods_NWRNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BBB7F3480AFC7D3B92C58C /* Pods-NWRNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNUITests/Pods-NWRNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		76FC4E5D1C304838D48AAD74 /* Pods-NWRNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNUITests/Pods-NWRNUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		97D7A7DED6460D93D75847E6 /* libPods-NWRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NWRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB92BACD9AA3B4D9EA9E802 /* Pods-NWRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.release.xcconfig"; sourceTree = "<group>"; };
 		C0C20C666478484B2340EC9C /* Pods-NWRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0A3B392F470DEB35DA7F5C3 /* Pods-NWRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D503114139AA53A0B57B8B9B /* Pods_NWRNUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRNUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NWRNUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA1ABCAEC62D33FA5E33380D /* Pods_NWRN.framework in Frameworks */,
+				2A4D13CEC18D394F217C5604 /* libPods-NWRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE44789684644EE2F5159B56 /* Pods_NWRNTests.framework in Frameworks */,
+				7CFA3539D2258F0E697F564B /* libPods-NWRNTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8576415FD13C216DE883AD /* Pods_NWRNUITests.framework in Frameworks */,
+				C22058CD29D6F520CB496C55 /* libPods-NWRNUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +166,7 @@
 				41CCC594219A06BD0042F590 /* LaunchScreen.storyboard */,
 				41CCC597219A06BD0042F590 /* Info.plist */,
 				41CCC58F219A06BC0042F590 /* NWRN.xcdatamodeld */,
+				412EF8BB219B6E0A00A72ECF /* NWRN-Bridging-Header.h */,
 			);
 			path = NWRN;
 			sourceTree = "<group>";
@@ -203,9 +205,9 @@
 		BA93D269C7487CA32221278D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				489624DFEBEBF95BA25773E8 /* Pods_NWRN.framework */,
-				5C6F081DE1B463EEE6C007AF /* Pods_NWRNTests.framework */,
-				D503114139AA53A0B57B8B9B /* Pods_NWRNUITests.framework */,
+				97D7A7DED6460D93D75847E6 /* libPods-NWRN.a */,
+				375144BF1D8D5876C554017F /* libPods-NWRNTests.a */,
+				E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,7 +223,7 @@
 				41CCC581219A06BC0042F590 /* Sources */,
 				41CCC582219A06BC0042F590 /* Frameworks */,
 				41CCC583219A06BC0042F590 /* Resources */,
-				172A7C4139D73D98A7882A83 /* [CP] Embed Pods Frameworks */,
+				5A1FFDA36F0B8A731DC5F99D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,34 +346,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		172A7C4139D73D98A7882A83 /* [CP] Embed Pods Frameworks */ = {
+		5A1FFDA36F0B8A731DC5F99D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NWRN/Pods-NWRN-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
-				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
-				"${BUILT_PRODUCTS_DIR}/React/React.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
-				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-NWRN/Pods-NWRN-resources.sh",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/RNVectorIcons/Fonts/Zocial.ttf",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NWRN/Pods-NWRN-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NWRN/Pods-NWRN-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F76160F3CD07593F8B4D1E0 /* [CP] Check Pods Manifest.lock */ = {
@@ -618,6 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NWRN/NWRN-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -638,6 +657,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sf.NWRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NWRN/NWRN-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

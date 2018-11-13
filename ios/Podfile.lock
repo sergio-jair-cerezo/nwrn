@@ -7,6 +7,8 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - React (0.57.4):
+    - React/Core (= 0.57.4)
   - React/Core (0.57.4):
     - yoga (= 0.57.4.React)
   - React/CxxBridge (0.57.4):
@@ -46,6 +48,8 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - RNVectorIcons (6.0.2):
+    - React
   - SlideMenuControllerSwift (4.0.0)
   - yoga (0.57.4.React)
 
@@ -65,6 +69,7 @@ DEPENDENCIES:
   - React/RCTNetwork (from `../nwrn/node_modules/react-native`)
   - React/RCTText (from `../nwrn/node_modules/react-native`)
   - React/RCTWebSocket (from `../nwrn/node_modules/react-native`)
+  - RNVectorIcons (from `../nwrn/node_modules/react-native-vector-icons/RNVectorIcons.podspec`)
   - SlideMenuControllerSwift
   - yoga (from `../nwrn/node_modules/react-native/ReactCommon/yoga`)
 
@@ -83,6 +88,8 @@ EXTERNAL SOURCES:
     :podspec: "../nwrn/node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../nwrn/node_modules/react-native"
+  RNVectorIcons:
+    :podspec: "../nwrn/node_modules/react-native-vector-icons/RNVectorIcons.podspec"
   yoga:
     :path: "../nwrn/node_modules/react-native/ReactCommon/yoga"
 
@@ -93,9 +100,10 @@ SPEC CHECKSUMS:
   Folly: c89ac2d5c6ab169cd7397ef27485c44f35f742c7
   glog: e8acf0ebbf99759d3ff18c86c292a5898282dcde
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
+  RNVectorIcons: d819334932bcda3332deb3d2c8ea4d069e0b98f9
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: 738b0072258fe662de8378d6f06df9d068d15bca
+PODFILE CHECKSUM: f9ba9ffac43264475727724c3708dd506cf5a5d9
 
 COCOAPODS: 1.5.3
