@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let sideMenuVC = SideMenuVC(nibName: "SideMenuVC", bundle: nil) as SideMenuVC
+        let swiftMainVC = SwiftMainVC(nibName: "SwiftMainVC", bundle: nil) as SwiftMainVC
+        
+        let slideMenuController = SlideMenuController(mainViewController: swiftMainVC,
+                                                      leftMenuViewController: sideMenuVC)
+        self.window?.rootViewController = slideMenuController
+        
         return true
     }
 

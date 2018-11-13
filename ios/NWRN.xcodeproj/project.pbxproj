@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DE2AE19F5723806D33604FC /* Pods_NWRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6688617CA96774AAE186E02D /* Pods_NWRNTests.framework */; };
+		41215CC1219A50960074A06E /* SwiftMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC0219A50960074A06E /* SwiftMainVC.swift */; };
+		41215CC3219A50DA0074A06E /* SwiftMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC2219A50DA0074A06E /* SwiftMainVC.xib */; };
+		41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41215CC4219A51580074A06E /* SideMenuVC.swift */; };
+		41215CC7219A51750074A06E /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41215CC6219A51750074A06E /* SideMenuVC.xib */; };
 		41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC588219A06BC0042F590 /* AppDelegate.swift */; };
-		41CCC58B219A06BC0042F590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC58A219A06BC0042F590 /* ViewController.swift */; };
-		41CCC58E219A06BC0042F590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CCC58C219A06BC0042F590 /* Main.storyboard */; };
 		41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC58F219A06BC0042F590 /* NWRN.xcdatamodeld */; };
 		41CCC593219A06BD0042F590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41CCC592219A06BD0042F590 /* Assets.xcassets */; };
 		41CCC596219A06BD0042F590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CCC594219A06BD0042F590 /* LaunchScreen.storyboard */; };
 		41CCC5A1219A06BD0042F590 /* NWRNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC5A0219A06BD0042F590 /* NWRNTests.swift */; };
 		41CCC5AC219A06BD0042F590 /* NWRNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC5AB219A06BD0042F590 /* NWRNUITests.swift */; };
-		5D74488A4ECBBD68AC8F7C53 /* Pods_NWRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3390D1C0FDD6D3C860C7AE62 /* Pods_NWRNUITests.framework */; };
-		CFD05D051BAC640F3FB0DD06 /* Pods_NWRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622AD5EDFFFB9ABA16AC6D4D /* Pods_NWRN.framework */; };
+		8C8576415FD13C216DE883AD /* Pods_NWRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D503114139AA53A0B57B8B9B /* Pods_NWRNUITests.framework */; };
+		EA1ABCAEC62D33FA5E33380D /* Pods_NWRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489624DFEBEBF95BA25773E8 /* Pods_NWRN.framework */; };
+		EE44789684644EE2F5159B56 /* Pods_NWRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F081DE1B463EEE6C007AF /* Pods_NWRNTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3390D1C0FDD6D3C860C7AE62 /* Pods_NWRNUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRNUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4094567744518CED24E97503 /* Pods-NWRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.debug.xcconfig"; sourceTree = "<group>"; };
+		41215CC0219A50960074A06E /* SwiftMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMainVC.swift; sourceTree = "<group>"; };
+		41215CC2219A50DA0074A06E /* SwiftMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftMainVC.xib; sourceTree = "<group>"; };
+		41215CC4219A51580074A06E /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		41215CC6219A51750074A06E /* SideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
 		41CCC585219A06BC0042F590 /* NWRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CCC588219A06BC0042F590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41CCC58A219A06BC0042F590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		41CCC58D219A06BC0042F590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41CCC590219A06BC0042F590 /* NWRN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NWRN.xcdatamodel; sourceTree = "<group>"; };
 		41CCC592219A06BD0042F590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41CCC595219A06BD0042F590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,13 +57,14 @@
 		41CCC5A7219A06BD0042F590 /* NWRNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NWRNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41CCC5AB219A06BD0042F590 /* NWRNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWRNUITests.swift; sourceTree = "<group>"; };
 		41CCC5AD219A06BD0042F590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		622AD5EDFFFB9ABA16AC6D4D /* Pods_NWRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6688617CA96774AAE186E02D /* Pods_NWRNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		489624DFEBEBF95BA25773E8 /* Pods_NWRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6F081DE1B463EEE6C007AF /* Pods_NWRNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BBB7F3480AFC7D3B92C58C /* Pods-NWRNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNUITests/Pods-NWRNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		76FC4E5D1C304838D48AAD74 /* Pods-NWRNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNUITests/Pods-NWRNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEB92BACD9AA3B4D9EA9E802 /* Pods-NWRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.release.xcconfig"; sourceTree = "<group>"; };
 		C0C20C666478484B2340EC9C /* Pods-NWRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0A3B392F470DEB35DA7F5C3 /* Pods-NWRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D503114139AA53A0B57B8B9B /* Pods_NWRNUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWRNUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD05D051BAC640F3FB0DD06 /* Pods_NWRN.framework in Frameworks */,
+				EA1ABCAEC62D33FA5E33380D /* Pods_NWRN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE2AE19F5723806D33604FC /* Pods_NWRNTests.framework in Frameworks */,
+				EE44789684644EE2F5159B56 /* Pods_NWRNTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,13 +88,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D74488A4ECBBD68AC8F7C53 /* Pods_NWRNUITests.framework in Frameworks */,
+				8C8576415FD13C216DE883AD /* Pods_NWRNUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41215CBD219A50560074A06E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41215CC0219A50960074A06E /* SwiftMainVC.swift */,
+				41215CC4219A51580074A06E /* SideMenuVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41215CBE219A50620074A06E /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				41215CBF219A50620074A06E /* ViewControllers */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		41215CBF219A50620074A06E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41215CC2219A50DA0074A06E /* SwiftMainVC.xib */,
+				41215CC6219A51750074A06E /* SideMenuVC.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		41CCC57C219A06BC0042F590 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +146,9 @@
 		41CCC587219A06BC0042F590 /* NWRN */ = {
 			isa = PBXGroup;
 			children = (
+				41215CBE219A50620074A06E /* XIB */,
+				41215CBD219A50560074A06E /* ViewControllers */,
 				41CCC588219A06BC0042F590 /* AppDelegate.swift */,
-				41CCC58A219A06BC0042F590 /* ViewController.swift */,
-				41CCC58C219A06BC0042F590 /* Main.storyboard */,
 				41CCC592219A06BD0042F590 /* Assets.xcassets */,
 				41CCC594219A06BD0042F590 /* LaunchScreen.storyboard */,
 				41CCC597219A06BD0042F590 /* Info.plist */,
@@ -161,9 +191,9 @@
 		BA93D269C7487CA32221278D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				622AD5EDFFFB9ABA16AC6D4D /* Pods_NWRN.framework */,
-				6688617CA96774AAE186E02D /* Pods_NWRNTests.framework */,
-				3390D1C0FDD6D3C860C7AE62 /* Pods_NWRNUITests.framework */,
+				489624DFEBEBF95BA25773E8 /* Pods_NWRN.framework */,
+				5C6F081DE1B463EEE6C007AF /* Pods_NWRNTests.framework */,
+				D503114139AA53A0B57B8B9B /* Pods_NWRNUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,7 +209,7 @@
 				41CCC581219A06BC0042F590 /* Sources */,
 				41CCC582219A06BC0042F590 /* Frameworks */,
 				41CCC583219A06BC0042F590 /* Resources */,
-				8294EB9F50AA7218BE7D0ABF /* [CP] Embed Pods Frameworks */,
+				172A7C4139D73D98A7882A83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,7 +308,8 @@
 			files = (
 				41CCC596219A06BD0042F590 /* LaunchScreen.storyboard in Resources */,
 				41CCC593219A06BD0042F590 /* Assets.xcassets in Resources */,
-				41CCC58E219A06BC0042F590 /* Main.storyboard in Resources */,
+				41215CC7219A51750074A06E /* SideMenuVC.xib in Resources */,
+				41215CC3219A50DA0074A06E /* SwiftMainVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +330,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8294EB9F50AA7218BE7D0ABF /* [CP] Embed Pods Frameworks */ = {
+		172A7C4139D73D98A7882A83 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,10 +338,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NWRN/Pods-NWRN-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -378,9 +411,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41CCC58B219A06BC0042F590 /* ViewController.swift in Sources */,
 				41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */,
 				41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */,
+				41215CC1219A50960074A06E /* SwiftMainVC.swift in Sources */,
+				41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +450,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		41CCC58C219A06BC0042F590 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41CCC58D219A06BC0042F590 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		41CCC594219A06BD0042F590 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
