@@ -19,6 +19,11 @@ target 'NWRN' do
       'RCTText',
       'RCTNetwork',
       'RCTWebSocket', # needed for debugging
+      'RCTLinkingIOS', # needed for react-navigation
+      'RCTImage', # needed for Button
+      'RCTAnimation', # needed for react-navigation
+      'RCTActionSheet',
+      'RCTBlob'
       # Add any other subspecs you want to use in your project
   ]
   # Explicitly include Yoga if you are using RN >= 0.42.0

@@ -50,12 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        //self.saveContext()
     }
 
     // MARK: - Core Data stack
-
-    lazy var persistentContainer: NSPersistentContainer = {
+    
+    //Commented persistentContainer due to downgrading depolyment version to 9.0
+    /*lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -80,11 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         return container
-    }()
+    }()*/
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    /*func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -96,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
+    }*/
 
 }
 

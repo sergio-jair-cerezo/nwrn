@@ -27,7 +27,16 @@ PODS:
     - React/PrivateDatabase
   - React/jsinspector (0.57.4)
   - React/PrivateDatabase (0.57.4)
+  - React/RCTActionSheet (0.57.4):
+    - React/Core
+  - React/RCTAnimation (0.57.4):
+    - React/Core
   - React/RCTBlob (0.57.4):
+    - React/Core
+  - React/RCTImage (0.57.4):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.57.4):
     - React/Core
   - React/RCTNetwork (0.57.4):
     - React/Core
@@ -48,6 +57,11 @@ DEPENDENCIES:
   - React/Core (from `../nwrn/node_modules/react-native`)
   - React/CxxBridge (from `../nwrn/node_modules/react-native`)
   - React/DevSupport (from `../nwrn/node_modules/react-native`)
+  - React/RCTActionSheet (from `../nwrn/node_modules/react-native`)
+  - React/RCTAnimation (from `../nwrn/node_modules/react-native`)
+  - React/RCTBlob (from `../nwrn/node_modules/react-native`)
+  - React/RCTImage (from `../nwrn/node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../nwrn/node_modules/react-native`)
   - React/RCTNetwork (from `../nwrn/node_modules/react-native`)
   - React/RCTText (from `../nwrn/node_modules/react-native`)
   - React/RCTWebSocket (from `../nwrn/node_modules/react-native`)
@@ -82,6 +96,6 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: d4a7a710306b88d480cf5dea9b44b8b648245ab2
+PODFILE CHECKSUM: 738b0072258fe662de8378d6f06df9d068d15bca
 
 COCOAPODS: 1.5.3
