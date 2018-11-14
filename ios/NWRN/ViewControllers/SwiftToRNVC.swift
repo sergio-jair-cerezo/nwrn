@@ -23,7 +23,7 @@ class SwiftToRNVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Swift to RN"
+        self.navigationItem.title = "Swift"
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "bars-solid"), style: .plain,
@@ -49,7 +49,7 @@ class SwiftToRNVC: UIViewController {
         }
         
         let rnVC = RNEmbededHelper.getRNVC(initialProperties: dictToPass as [NSObject : AnyObject])
-        rnVC.title = "High Scores"
+        rnVC.title = "RN"
         self.navigationController?.pushViewController(rnVC, animated: true)
     }
     

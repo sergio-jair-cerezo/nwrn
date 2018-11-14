@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Button, NativeModules} from 'react-native';
 
 export default class HighScoresScreen extends React.Component {
 
@@ -20,6 +20,21 @@ export default class HighScoresScreen extends React.Component {
         <Text style={styles.highScoresTitle}>High Scores:</Text>
         <Text style={styles.scores}>{contents}</Text>
         <Text style={styles.highScoresTitle}>(React Native Screen Made)</Text>
+        <Button title="Display result in Swift >" onPress={() => {
+          if (NativeModules.SideMenuExternalManager) {
+            NativeModules.SideMenuExternalManager.showHighScoresResultFromJS(
+              this.props.screenProps.scores.length)
+          } else {
+            Alert.alert(
+              'Feature not available',
+              'Only available for embeded app',
+              [
+                {text: 'OK', onPress: () => {}},
+              ],
+              { cancelable: false }
+            )
+          }
+        }} />
       </View>
     );
   }

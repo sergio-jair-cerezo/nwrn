@@ -19,6 +19,17 @@ class SideMenuExternalManager: NSObject  {
         }
     }
     
+    @objc func showHighScoresResultFromJS(_ scoresDisplayed: NSNumber) -> Void {
+        DispatchQueue.main.async {
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            
+            let rnHighScoresResultVC = RNHighScoresResultVC(nibName: "RNHighScoresResultVC", bundle: nil) as RNHighScoresResultVC
+            rnHighScoresResultVC.scoresDisplayed = scoresDisplayed.intValue
+            
+            appDelegate?.mainNC.pushViewController(rnHighScoresResultVC, animated: true)
+        }
+    }
+    
     @objc static func requiresMainQueueSetup() -> Bool {
         return false
     }

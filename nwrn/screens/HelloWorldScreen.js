@@ -57,7 +57,7 @@ export default class HelloWorldScreen extends Component {
         <Text style={styles.welcome}>(React Native Screen Made)</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Button title="Go to Second Screen" onPress={() => {
+        <Button title="Go to Second Screen >" onPress={() => {
           navigate('SecondScreen')
         }} />
       </View>

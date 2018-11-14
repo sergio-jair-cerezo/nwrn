@@ -12,5 +12,6 @@
 @interface RCT_EXTERN_MODULE(SideMenuExternalManager, NSObject)
 
 RCT_EXTERN_METHOD(openMenuFromJS)
+RCT_EXTERN_METHOD(showHighScoresResultFromJS:)
 
 @end
