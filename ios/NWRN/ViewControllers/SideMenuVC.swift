@@ -28,10 +28,9 @@ class SideMenuVC: UIViewController {
     enum MenuOption: String {
         case swift = "Swift"
         case react = "React"
-        case swiftToRN = "Swift to React"
-        case rnToSwift = "React to Swift"
+        case swiftAndRN = "Swift + React"
     }
-    static let menuOptions: [MenuOption] = [.swift, .react, .swiftToRN, .rnToSwift]
+    static let menuOptions: [MenuOption] = [.swift, .react, .swiftAndRN]
 }
 
 extension SideMenuVC: UITableViewDataSource {
@@ -62,10 +61,9 @@ extension SideMenuVC: UITableViewDelegate {
             self.appDelegate.mainNC.setViewControllers([swiftFirstVC], animated: true)
         case .react:
             self.appDelegate.mainNC.setViewControllers([RNEmbededHelper.getRNVC()], animated: true)
-        case .swiftToRN:
+        case .swiftAndRN:
             let swiftToRNVC = SwiftToRNVC(nibName: "SwiftToRNVC", bundle: nil) as SwiftToRNVC
             self.appDelegate.mainNC.setViewControllers([swiftToRNVC], animated: true)
-        default: break;
         }
         
         let hideNavBar = selectedOption == .react
