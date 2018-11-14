@@ -26,6 +26,7 @@
 		41CCC5AC219A06BD0042F590 /* NWRNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCC5AB219A06BD0042F590 /* NWRNUITests.swift */; };
 		7CFA3539D2258F0E697F564B /* libPods-NWRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 375144BF1D8D5876C554017F /* libPods-NWRNTests.a */; };
 		C22058CD29D6F520CB496C55 /* libPods-NWRNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */; };
+		C48998A8219C92E300808062 /* RNEmbededHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48998A7219C92E300808062 /* RNEmbededHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		97D7A7DED6460D93D75847E6 /* libPods-NWRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NWRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB92BACD9AA3B4D9EA9E802 /* Pods-NWRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.release.xcconfig"; sourceTree = "<group>"; };
 		C0C20C666478484B2340EC9C /* Pods-NWRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		C48998A7219C92E300808062 /* RNEmbededHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNEmbededHelper.swift; sourceTree = "<group>"; };
 		D0A3B392F470DEB35DA7F5C3 /* Pods-NWRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NWRNUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 			children = (
 				412EF8BF219B80C000A72ECF /* SwiftReactNativeBridge.m */,
 				412EF8C1219B89CA00A72ECF /* SideMenuExternalManager.swift */,
+				C48998A7219C92E300808062 /* RNEmbededHelper.swift */,
 			);
 			path = RNBridging;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				412EF8C0219B80C000A72ECF /* SwiftReactNativeBridge.m in Sources */,
 				41215CC9219A62DD0074A06E /* SwiftSecondVC.swift in Sources */,
 				41215CC5219A51580074A06E /* SideMenuVC.swift in Sources */,
+				C48998A8219C92E300808062 /* RNEmbededHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwiftToRNVC" customModule="NWRN" customModuleProvider="target">
             <connections>
+                <outlet property="textView" destination="U3h-MC-e2c" id="cHW-WT-jlT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="okn-RR-dui"/>
             </connections>
         </placeholder>
@@ -21,18 +22,47 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlF-gb-rDu">
-                    <rect key="frame" x="47" y="313" width="281" height="41"/>
+                    <rect key="frame" x="47" y="40" width="281" height="41"/>
                     <string key="text">Swift to React Native View Controller
 Swift made</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data to pass to React Native" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csh-Zy-bbH">
+                    <rect key="frame" x="12" y="111" width="217" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T22-Kd-Fgs">
+                    <rect key="frame" x="116.5" y="306" width="142" height="30"/>
+                    <state key="normal" title="Go to React Native &gt;"/>
+                    <connections>
+                        <action selector="goToRNTapped:" destination="-1" eventType="touchUpInside" id="ze6-O2-BNp"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U3h-MC-e2c">
+                    <rect key="frame" x="12" y="144" width="351" height="150"/>
+                    <color key="backgroundColor" white="0.89905286815068497" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="pwd-Jo-VOU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="DlF-gb-rDu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4aZ-QN-mKP"/>
+                <constraint firstItem="T22-Kd-Fgs" firstAttribute="top" secondItem="U3h-MC-e2c" secondAttribute="bottom" constant="12" id="E7V-Ol-hAB"/>
+                <constraint firstItem="csh-Zy-bbH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="G3G-MI-DvK"/>
+                <constraint firstItem="U3h-MC-e2c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="HVw-BG-Eqq"/>
+                <constraint firstItem="DlF-gb-rDu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Ksm-HM-lPu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U3h-MC-e2c" secondAttribute="trailing" constant="12" id="QI3-yt-275"/>
                 <constraint firstItem="DlF-gb-rDu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aBv-he-CyF"/>
+                <constraint firstItem="csh-Zy-bbH" firstAttribute="top" secondItem="DlF-gb-rDu" secondAttribute="bottom" constant="30" id="fDp-Ax-qTz"/>
+                <constraint firstItem="U3h-MC-e2c" firstAttribute="top" secondItem="csh-Zy-bbH" secondAttribute="bottom" constant="12" id="k2d-Nd-mkC"/>
+                <constraint firstItem="T22-Kd-Fgs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mDd-oW-WAK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
