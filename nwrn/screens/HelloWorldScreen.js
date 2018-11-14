@@ -7,13 +7,14 @@
  */
 
 import React, { Component } from 'react';
-import { 
-  Platform, 
-  StyleSheet, 
-  Text, 
-  View, 
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
   Button,
-  NativeModules
+  NativeModules,
+  Alert
 } from 'react-native';
 import { Icon } from 'react-native-elements';
 
@@ -31,8 +32,19 @@ export default class HelloWorldScreen extends Component {
 
   static navigationOptions = {
     title: 'First Screen',
-    headerLeft: <Icon name="menu" size={35} onPress={ () => {
-      NativeModules.SideMenuExternalManager.openMenuFromJS();
+    headerLeft: <Icon name="menu" size={35} onPress={() => {
+      if (NativeModules.SideMenuExternalManager) {
+        NativeModules.SideMenuExternalManager.openMenuFromJS();
+      } else {
+        Alert.alert(
+          'Feature not available',
+          'Only available for embeded app',
+          [
+            {text: 'OK', onPress: () => {}},
+          ],
+          { cancelable: false }
+        )
+      }
     }} />
   };
 
