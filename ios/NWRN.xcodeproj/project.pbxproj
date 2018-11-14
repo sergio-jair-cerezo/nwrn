@@ -27,6 +27,7 @@
 		7CFA3539D2258F0E697F564B /* libPods-NWRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 375144BF1D8D5876C554017F /* libPods-NWRNTests.a */; };
 		C22058CD29D6F520CB496C55 /* libPods-NWRNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */; };
 		C48998A8219C92E300808062 /* RNEmbededHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48998A7219C92E300808062 /* RNEmbededHelper.swift */; };
+		C48998AD219C9B0C00808062 /* NWRN+NSDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48998AC219C9B0C00808062 /* NWRN+NSDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		AEB92BACD9AA3B4D9EA9E802 /* Pods-NWRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRN/Pods-NWRN.release.xcconfig"; sourceTree = "<group>"; };
 		C0C20C666478484B2340EC9C /* Pods-NWRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		C48998A7219C92E300808062 /* RNEmbededHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNEmbededHelper.swift; sourceTree = "<group>"; };
+		C48998AC219C9B0C00808062 /* NWRN+NSDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NWRN+NSDictionary.swift"; sourceTree = "<group>"; };
 		D0A3B392F470DEB35DA7F5C3 /* Pods-NWRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NWRNTests/Pods-NWRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NWRNUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 		41CCC587219A06BC0042F590 /* NWRN */ = {
 			isa = PBXGroup;
 			children = (
+				C48998AA219C9AE900808062 /* Util */,
 				412EF8BC219B7FF500A72ECF /* RNBridging */,
 				41215CBE219A50620074A06E /* XIB */,
 				41215CBD219A50560074A06E /* ViewControllers */,
@@ -227,6 +230,22 @@
 				E65AAFEC6786A44EA3A77CB5 /* libPods-NWRNUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C48998AA219C9AE900808062 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C48998AB219C9AF700808062 /* Extensions */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C48998AB219C9AF700808062 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C48998AC219C9B0C00808062 /* NWRN+NSDictionary.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +492,7 @@
 				412EF8C2219B89CA00A72ECF /* SideMenuExternalManager.swift in Sources */,
 				41CCC591219A06BC0042F590 /* NWRN.xcdatamodeld in Sources */,
 				41CCC589219A06BC0042F590 /* AppDelegate.swift in Sources */,
+				C48998AD219C9B0C00808062 /* NWRN+NSDictionary.swift in Sources */,
 				41215CCB219A63210074A06E /* SwiftFirstVC.swift in Sources */,
 				41215CCF219A6AFF0074A06E /* SwiftToRNVC.swift in Sources */,
 				412EF8C0219B80C000A72ECF /* SwiftReactNativeBridge.m in Sources */,
