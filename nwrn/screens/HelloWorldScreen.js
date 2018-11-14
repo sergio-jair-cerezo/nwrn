@@ -49,6 +49,7 @@ export default class HelloWorldScreen extends Component {
   };
 
   render() {
+    console.log('this.props in HelloWorldScreen', this.props);
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
