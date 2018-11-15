@@ -19,11 +19,11 @@ class KotlinFirstFragment : Fragment() {
         super.onStart()
 
         btn_go_to_second_act.setOnClickListener {
-            /*var transaction = fragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
-            transaction?.replace(R.id.fragment_container, AnalysisResultsFragment())
+            var transaction = fragmentManager?.beginTransaction()
+            //transaction?.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
+            transaction?.replace(R.id.fragment_container, KotlinSecondFragment())
             transaction?.addToBackStack(null)
-            transaction?.commit()*/
+            transaction?.commit()
         }
     }
 }
