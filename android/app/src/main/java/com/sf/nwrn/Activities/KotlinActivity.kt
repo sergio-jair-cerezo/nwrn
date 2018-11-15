@@ -2,6 +2,7 @@ package com.sf.nwrn.Activities
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
@@ -12,15 +13,21 @@ import kotlinx.android.synthetic.main.app_bar_kotlin.*
 
 class KotlinActivity : BaseActivity() {
 
+    var actionBarDrawerToggle: ActionBarDrawerToggle? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin)
         setSupportActionBar(toolbar)
 
-        val toggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()
+        drawer_layout.addDrawerListener(actionBarDrawerToggle!!)
+        actionBarDrawerToggle!!.syncState()
+
+        actionBarDrawerToggle!!.setToolbarNavigationClickListener {
+            onBackPressed()
+        }
 
         getNavigationView()?.setNavigationItemSelectedListener(this)
         getNavigationView()?.setCheckedItem(getNavigationItemId())
@@ -31,13 +38,15 @@ class KotlinActivity : BaseActivity() {
         transaction?.add(R.id.fragment_container, KotlinFirstFragment())?.commit()
     }
 
-    /*override fun onBackPressed() {
+    override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
+        } else if (supportFragmentManager?.backStackEntryCount ?: 0 > 0) {
+            supportFragmentManager?.popBackStackImmediate()
         } else {
             super.onBackPressed()
         }
-    }*/
+    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val itemSelected = super.onNavigationItemSelected(item)

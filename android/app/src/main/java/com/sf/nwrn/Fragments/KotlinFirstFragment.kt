@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.sf.nwrn.Activities.KotlinActivity
 import com.sf.nwrn.R
 import kotlinx.android.synthetic.main.fragment_kotlin_first.*
 
@@ -25,5 +26,13 @@ class KotlinFirstFragment : Fragment() {
             transaction?.addToBackStack(null)
             transaction?.commit()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val kotlinActivity = activity as KotlinActivity
+        kotlinActivity?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        kotlinActivity?.actionBarDrawerToggle?.isDrawerIndicatorEnabled = true
     }
 }
