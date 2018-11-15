@@ -2,8 +2,12 @@
     <string name="app_name">NWRN</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Side Menu View</string>
+    <string name="nav_header_subtitle">Kotlin made</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="menu_kotlin">Kotlin</string>
+    <string name="menu_react">React</string>
+    <string name="menu_kotlin_and_react">Kotlin + React</string>
+    <string name="activity_first">First Activity</string>
 </resources>
