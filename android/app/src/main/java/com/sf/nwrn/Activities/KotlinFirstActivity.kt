@@ -9,7 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import com.sf.nwrn.R
 import kotlinx.android.synthetic.main.activity_kotlin_first.*
-import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.app_bar_kotlin_first.*
 import kotlinx.android.synthetic.main.content_kotlin_first.*
 
 class KotlinFirstActivity : BaseActivity() {
