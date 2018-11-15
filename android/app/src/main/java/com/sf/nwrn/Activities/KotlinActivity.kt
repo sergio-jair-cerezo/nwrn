@@ -1,22 +1,20 @@
 package com.sf.nwrn.Activities
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
+import com.sf.nwrn.Fragments.KotlinFirstFragment
 import com.sf.nwrn.R
-import kotlinx.android.synthetic.main.activity_kotlin_first.*
-import kotlinx.android.synthetic.main.app_bar_kotlin_first.*
-import kotlinx.android.synthetic.main.content_kotlin_first.*
+import kotlinx.android.synthetic.main.activity_kotlin.*
+import kotlinx.android.synthetic.main.app_bar_kotlin.*
 
-class KotlinFirstActivity : BaseActivity() {
+class KotlinActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin_first)
+        setContentView(R.layout.activity_kotlin)
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
@@ -25,22 +23,21 @@ class KotlinFirstActivity : BaseActivity() {
         toggle.syncState()
 
         getNavigationView()?.setNavigationItemSelectedListener(this)
+        getNavigationView()?.setCheckedItem(getNavigationItemId())
 
-        title = getString(R.string.activity_first)
+        title = getString(R.string.activity_kotlin)
 
-        btn_go_to_second_act.setOnClickListener {
-            val intent = Intent(this, KotlinSecondActivity::class.java)
-            startActivity(intent)
-        }
+        var transaction = supportFragmentManager?.beginTransaction()
+        transaction?.add(R.id.fragment_container, KotlinFirstFragment())?.commit()
     }
 
-    override fun onBackPressed() {
+    /*override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
-    }
+    }*/
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val itemSelected = super.onNavigationItemSelected(item)
@@ -52,5 +49,5 @@ class KotlinFirstActivity : BaseActivity() {
 
     override fun getNavigationView(): NavigationView? = nav_view
 
-    override fun getNavigationItemId(): Int = 0
+    override fun getNavigationItemId(): Int = R.id.nav_kotlin
 }
