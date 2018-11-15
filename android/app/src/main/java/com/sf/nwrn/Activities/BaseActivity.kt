@@ -1,11 +1,13 @@
 package com.sf.nwrn.Activities
 
+import android.content.Intent
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.sf.nwrn.R
 
 abstract class BaseActivity: AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,27 +30,14 @@ abstract class BaseActivity: AppCompatActivity(), NavigationView.OnNavigationIte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if (item.itemId != getNavigationItemId()) {
             when (item.itemId) {
-                /*R.id.nav_analysis_results -> {
-                    val intent = Intent(this, AnalysisResultsActivity::class.java)
+                R.id.nav_kotlin -> {
+                    val intent = Intent(this, KotlinActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.nav_complaints -> {
-
-                }
-                R.id.nav_branches -> {
-                    val intent = Intent(this, BranchesActivity::class.java)
+                R.id.nav_react -> {
+                    val intent = Intent(this, ReactActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.nav_company -> {
-
-                }
-                R.id.nav_contact_us -> {
-
-                }
-                R.id.nav_season_promotion -> {
-                    val intent = Intent(this, SeasonPromotionActivity::class.java)
-                    startActivity(intent)
-                }*/
             }
         }
 
