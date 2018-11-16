@@ -38,6 +38,10 @@ abstract class BaseActivity: AppCompatActivity(), NavigationView.OnNavigationIte
                     val intent = Intent(this, ReactActivity::class.java)
                     startActivity(intent)
                 }
+                R.id.nav_kotlin_and_react -> {
+                    val intent = Intent(this, KotlinAndReactActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
 
