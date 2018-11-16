@@ -17,6 +17,9 @@ import com.sf.nwrn.BuildConfig
 import com.sf.nwrn.R
 import kotlinx.android.synthetic.main.activity_react.*
 import kotlinx.android.synthetic.main.app_bar_react.*
+import com.facebook.react.ReactPackage
+import com.sf.nwrn.Bridging.NavigationExternalPackage
+import java.util.*
 
 class ReactActivity : BaseActivity(), DefaultHardwareBackBtnHandler {
     private var mReactRootView: ReactRootView? = null
@@ -43,6 +46,7 @@ class ReactActivity : BaseActivity(), DefaultHardwareBackBtnHandler {
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModulePath("index")
                 .addPackage(MainReactPackage())
+                .addPackage(NavigationExternalPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build()

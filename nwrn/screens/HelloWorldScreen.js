@@ -35,6 +35,8 @@ export default class HelloWorldScreen extends Component {
     headerLeft: <Icon name="menu" size={35} onPress={() => {
       if (NativeModules.SideMenuExternalManager) {
         NativeModules.SideMenuExternalManager.openMenuFromJS();
+      } else if (NativeModules.NavigationExternalManager) {
+        NativeModules.NavigationExternalManager.openMenuFromJS();
       } else {
         Alert.alert(
           'Feature not available',
