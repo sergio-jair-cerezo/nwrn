@@ -5,17 +5,37 @@ import com.facebook.react.shell.MainReactPackage
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactRootView
 import android.os.Bundle
+import android.support.design.widget.NavigationView
+import android.support.v4.widget.DrawerLayout
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
-import android.app.Activity
+import android.support.v7.app.ActionBarDrawerToggle
 import android.view.KeyEvent
+import android.view.MenuItem
+import android.view.View
+import android.widget.LinearLayout
 import com.sf.nwrn.BuildConfig
+import com.sf.nwrn.R
+import kotlinx.android.synthetic.main.activity_react.*
+import kotlinx.android.synthetic.main.app_bar_react.*
 
-class ReactActivity : Activity(), DefaultHardwareBackBtnHandler {
+class ReactActivity : BaseActivity(), DefaultHardwareBackBtnHandler {
     private var mReactRootView: ReactRootView? = null
     private var mReactInstanceManager: ReactInstanceManager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_react)
+        setSupportActionBar(toolbar)
+        toolbar.visibility = View.GONE
+
+        val actionBarDrawerToggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        drawer_layout.addDrawerListener(actionBarDrawerToggle!!)
+        actionBarDrawerToggle!!.syncState()
+
+        getNavigationView()?.setNavigationItemSelectedListener(this)
+        getNavigationView()?.setCheckedItem(getNavigationItemId())
 
         mReactRootView = ReactRootView(this)
         mReactInstanceManager = ReactInstanceManager.builder()
@@ -30,7 +50,10 @@ class ReactActivity : Activity(), DefaultHardwareBackBtnHandler {
         // the string in AppRegistry.registerComponent() in index.js
         mReactRootView!!.startReactApplication(mReactInstanceManager, "nwrn", null)
 
-        setContentView(mReactRootView)
+        mReactRootView!!.layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT)
+        react_container.addView(mReactRootView)
     }
 
     override fun onPause() {
@@ -71,4 +94,16 @@ class ReactActivity : Activity(), DefaultHardwareBackBtnHandler {
         }
         return super.onKeyUp(keyCode, event)
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val itemSelected = super.onNavigationItemSelected(item)
+        unCheckAllMenuItems(getNavigationView()?.menu)
+        return itemSelected
+    }
+
+    override fun getDrawerLayout(): DrawerLayout? = drawer_layout
+
+    override fun getNavigationView(): NavigationView? = nav_view
+
+    override fun getNavigationItemId(): Int = R.id.nav_react
 }
