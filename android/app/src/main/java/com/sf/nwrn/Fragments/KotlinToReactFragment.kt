@@ -19,10 +19,24 @@ class KotlinToReactFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        val initialProperties = Bundle()
+        val scoresArray = ArrayList<Bundle>()
+        val alexBundle = Bundle()
+        alexBundle.putString("name", "Alex")
+        alexBundle.putString("value", "42")
+        scoresArray.add(alexBundle)
+        val joelBundle = Bundle()
+        joelBundle.putString("name", "Joel")
+        joelBundle.putString("value", "10")
+        scoresArray.add(joelBundle)
+        initialProperties.putParcelableArrayList("scores", scoresArray)
+
         btn_go_to_rn.setOnClickListener {
             var transaction = fragmentManager?.beginTransaction()
             //transaction?.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
-            transaction?.replace(R.id.fragment_container, ReactHighScoresFragment())
+            val reactHighScoresFragment = ReactHighScoresFragment()
+            reactHighScoresFragment.initialProperties = initialProperties
+            transaction?.replace(R.id.fragment_container, reactHighScoresFragment)
             transaction?.addToBackStack(null)
             transaction?.commit()
         }

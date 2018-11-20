@@ -11,6 +11,8 @@ import com.sf.nwrn.Bridging.ReactEmbededHelper
 
 class ReactHighScoresFragment: Fragment() {
 
+    var initialProperties: Bundle? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val reactBaseActivity = activity as? ReactBaseActivity
@@ -19,7 +21,7 @@ class ReactHighScoresFragment: Fragment() {
                     reactBaseActivity.application)
             reactBaseActivity.mReactInstanceManager?.let { reactInstanceManager ->
                 reactBaseActivity.mReactRootView = ReactEmbededHelper.getReactRootView(
-                        reactBaseActivity, reactInstanceManager, null)
+                        reactBaseActivity, reactInstanceManager, initialProperties)
                 reactBaseActivity.mReactRootView?.let { reactRootView ->
                     return reactRootView
                 }

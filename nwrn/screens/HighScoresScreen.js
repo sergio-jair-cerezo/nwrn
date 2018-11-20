@@ -1,13 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View, Button, NativeModules} from 'react-native';
+import {Alert, StyleSheet, Text, View, Button, NativeModules, Platform} from 'react-native';
 
 export default class HighScoresScreen extends React.Component {
 
   static navigationOptions = {
-    title: 'High Scores Screen',
+    ...Platform.select({
+      android: {
+        header: null
+      }
+    }),
   };
 
   render() {
+
+    const textForButton = Platform.select({
+      ios: 'Display result in Swift >',
+      android: 'Display result in Kotlin >'
+    });
+
     console.log('this.props in HighScoresScreen', this.props);
     var contents = this.props.screenProps['scores'].map((score) => (
       <Text key={score.name}>
@@ -20,7 +30,7 @@ export default class HighScoresScreen extends React.Component {
         <Text style={styles.highScoresTitle}>High Scores:</Text>
         <Text style={styles.scores}>{contents}</Text>
         <Text style={styles.highScoresTitle}>(React Native Screen Made)</Text>
-        <Button title="Display result in Swift >" onPress={() => {
+        <Button title={textForButton} onPress={() => {
           if (NativeModules.SideMenuExternalManager) {
             NativeModules.SideMenuExternalManager.showHighScoresResultFromJS(
               this.props.screenProps.scores.length)
