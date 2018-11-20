@@ -1,6 +1,7 @@
 package com.sf.nwrn.Bridging
 
 import android.support.v4.view.GravityCompat
+import android.util.Log
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
@@ -16,5 +17,10 @@ class NavigationExternalManager(reactContext: ReactApplicationContext) : ReactCo
     fun openMenuFromJS() {
         val baseActivity = reactApplicationContext.currentActivity as? ReactBaseActivity
         baseActivity?.getDrawerLayout()?.openDrawer(GravityCompat.START)
+    }
+
+    @ReactMethod
+    fun showHighScoresResultFromJS(scoresDisplayed: Int) {
+        Log.d("NEM", "scoresDisplayed: $scoresDisplayed")
     }
 }

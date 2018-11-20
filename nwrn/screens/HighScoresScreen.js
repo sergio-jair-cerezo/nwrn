@@ -34,6 +34,9 @@ export default class HighScoresScreen extends React.Component {
           if (NativeModules.SideMenuExternalManager) {
             NativeModules.SideMenuExternalManager.showHighScoresResultFromJS(
               this.props.screenProps.scores.length)
+          } else if (NativeModules.NavigationExternalManager) {
+            NativeModules.NavigationExternalManager.showHighScoresResultFromJS(
+              this.props.screenProps.scores.length)
           } else {
             Alert.alert(
               'Feature not available',
