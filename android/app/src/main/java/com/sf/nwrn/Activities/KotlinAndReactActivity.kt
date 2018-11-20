@@ -12,10 +12,8 @@ import com.sf.nwrn.Fragments.KotlinToReactFragment
 import kotlinx.android.synthetic.main.activity_kotlin_and_react.*
 import kotlinx.android.synthetic.main.app_bar_kotlin_and_react.*
 
-class KotlinAndReactActivity : BaseActivity() {
+class KotlinAndReactActivity : ReactBaseActivity() {
 
-    //private var mReactRootView: ReactRootView? = null
-    //private var mReactInstanceManager: ReactInstanceManager? = null
     var actionBarDrawerToggle: ActionBarDrawerToggle? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,13 +22,15 @@ class KotlinAndReactActivity : BaseActivity() {
         setContentView(R.layout.activity_kotlin_and_react)
         setSupportActionBar(toolbar)
 
-        val actionBarDrawerToggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(actionBarDrawerToggle!!)
-        actionBarDrawerToggle!!.syncState()
+        actionBarDrawerToggle?.let {
+            drawer_layout.addDrawerListener(it)
+            it.syncState()
 
-        actionBarDrawerToggle!!.setToolbarNavigationClickListener {
-            onBackPressed()
+            it.setToolbarNavigationClickListener {
+                onBackPressed()
+            }
         }
 
         getNavigationView()?.setNavigationItemSelectedListener(this)
@@ -42,45 +42,6 @@ class KotlinAndReactActivity : BaseActivity() {
         transaction?.add(R.id.fragment_container, KotlinToReactFragment())?.commit()
 
     }
-
-    /*override fun onPause() {
-        super.onPause()
-
-        mReactInstanceManager?.onHostPause(this)
-    }
-
-    override fun onResume() {
-        super.onResume()
-
-        mReactInstanceManager?.onHostResume(this, this)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        mReactInstanceManager?.onHostDestroy(this)
-        mReactRootView?.unmountReactApplication()
-    }
-
-    override fun onBackPressed() {
-        mReactInstanceManager?.let {
-            it.onBackPressed()
-        } ?: run {
-            super.onBackPressed()
-        }
-    }
-
-    override fun invokeDefaultOnBackPressed() {
-        super.onBackPressed()
-    }
-
-    override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_MENU && mReactInstanceManager != null) {
-            mReactInstanceManager?.showDevOptionsDialog()
-            return true
-        }
-        return super.onKeyUp(keyCode, event)
-    }*/
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
@@ -103,29 +64,4 @@ class KotlinAndReactActivity : BaseActivity() {
     override fun getNavigationView(): NavigationView? = nav_view
 
     override fun getNavigationItemId(): Int = R.id.nav_kotlin_and_react
-
-    fun createRNFragment(): Fragment? {
-        val fragment = Fragment()
-
-        /*mReactRootView = ReactRootView(this)
-        mReactInstanceManager = ReactInstanceManager.builder()
-                .setApplication(application)
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModulePath("index")
-                .addPackage(MainReactPackage())
-                .addPackage(NavigationExternalPackage())
-                .setUseDeveloperSupport(BuildConfig.DEBUG)
-                .setInitialLifecycleState(LifecycleState.RESUMED)
-                .build()
-        // The string here (e.g. "MyReactNativeApp") has to match
-        // the string in AppRegistry.registerComponent() in index.js
-        mReactRootView!!.startReactApplication(mReactInstanceManager, "nwrn", null)
-
-        mReactRootView!!.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT)
-        react_container.addView(mReactRootView)*/
-
-        return fragment
-    }
 }

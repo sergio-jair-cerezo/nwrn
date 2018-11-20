@@ -4,7 +4,7 @@ import android.support.v4.view.GravityCompat
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.sf.nwrn.Activities.BaseActivity
+import com.sf.nwrn.Activities.ReactBaseActivity
 
 class NavigationExternalManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -14,7 +14,7 @@ class NavigationExternalManager(reactContext: ReactApplicationContext) : ReactCo
 
     @ReactMethod
     fun openMenuFromJS() {
-        val baseActivity = reactApplicationContext.currentActivity as? BaseActivity
+        val baseActivity = reactApplicationContext.currentActivity as? ReactBaseActivity
         baseActivity?.getDrawerLayout()?.openDrawer(GravityCompat.START)
     }
 }

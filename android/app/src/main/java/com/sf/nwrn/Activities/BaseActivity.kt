@@ -16,9 +16,9 @@ abstract class BaseActivity: AppCompatActivity(), NavigationView.OnNavigationIte
     abstract fun getNavigationItemId(): Int
 
     override fun onBackPressed() {
-        getDrawerLayout().also { drawerLayout ->
-            if (drawerLayout!!.isDrawerOpen(GravityCompat.START)) {
-                drawerLayout.closeDrawer(GravityCompat.START)
+        getDrawerLayout()?.let {
+            if (it.isDrawerOpen(GravityCompat.START)) {
+                it.closeDrawer(GravityCompat.START)
             } else {
                 super.onBackPressed()
             }
@@ -52,11 +52,13 @@ abstract class BaseActivity: AppCompatActivity(), NavigationView.OnNavigationIte
     protected fun unCheckAllMenuItems(menu: Menu?) {
         val size = menu?.size() ?: 0
         for (i in 0 until size) {
-            val item = menu!!.getItem(i)
-            if (item!!.hasSubMenu()) {
-                unCheckAllMenuItems(item.subMenu)
-            } else {
-                item.isChecked = false
+            val item = menu?.getItem(i)
+            item?.let {
+                if (it.hasSubMenu()) {
+                    unCheckAllMenuItems(it.subMenu)
+                } else {
+                    it.isChecked = false
+                }
             }
         }
     }
@@ -64,8 +66,8 @@ abstract class BaseActivity: AppCompatActivity(), NavigationView.OnNavigationIte
     protected fun getMenuItemWith(itemId: Int): MenuItem? {
         val size = getNavigationView()?.menu?.size() ?: 0
         for (i in 0 until size) {
-            val item = getNavigationView()!!.menu!!.getItem(i)
-            if (item!!.itemId == itemId) {
+            val item = getNavigationView()?.menu?.getItem(i)
+            if (item?.itemId == itemId) {
                 return item
             }
         }

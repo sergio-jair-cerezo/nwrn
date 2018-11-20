@@ -34,7 +34,7 @@ class ReactEmbededHelper {
             // the string in AppRegistry.registerComponent() in index.js
             reactRootView?.startReactApplication(reactInstanceManager, "nwrn", initialProperties)
 
-            reactRootView!!.layoutParams = LinearLayout.LayoutParams(
+            reactRootView?.layoutParams = LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.MATCH_PARENT)
             return reactRootView

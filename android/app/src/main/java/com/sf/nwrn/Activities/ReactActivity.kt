@@ -23,8 +23,10 @@ class ReactActivity : ReactBaseActivity(), DefaultHardwareBackBtnHandler {
 
         val actionBarDrawerToggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(actionBarDrawerToggle!!)
-        actionBarDrawerToggle!!.syncState()
+        actionBarDrawerToggle?.let {
+            drawer_layout.addDrawerListener(it)
+            it.syncState()
+        }
 
         getNavigationView()?.setNavigationItemSelectedListener(this)
         getNavigationView()?.setCheckedItem(getNavigationItemId())

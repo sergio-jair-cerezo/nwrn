@@ -22,11 +22,13 @@ class KotlinActivity : BaseActivity() {
 
         actionBarDrawerToggle = ActionBarDrawerToggle(this, getDrawerLayout(), toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(actionBarDrawerToggle!!)
-        actionBarDrawerToggle!!.syncState()
+        actionBarDrawerToggle?.let {
+            drawer_layout.addDrawerListener(it)
+            it.syncState()
 
-        actionBarDrawerToggle!!.setToolbarNavigationClickListener {
-            onBackPressed()
+            it.setToolbarNavigationClickListener {
+                onBackPressed()
+            }
         }
 
         getNavigationView()?.setNavigationItemSelectedListener(this)
