@@ -7,8 +7,8 @@ import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
 
 abstract class ReactBaseActivity : BaseActivity(), DefaultHardwareBackBtnHandler {
 
-    protected var mReactRootView: ReactRootView? = null
-    protected var mReactInstanceManager: ReactInstanceManager? = null
+    var mReactRootView: ReactRootView? = null
+    var mReactInstanceManager: ReactInstanceManager? = null
 
     override fun onPause() {
         super.onPause()
