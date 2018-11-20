@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_react.*
 import kotlinx.android.synthetic.main.app_bar_react.*
 import com.facebook.react.ReactPackage
 import com.sf.nwrn.Bridging.NavigationExternalPackage
+import com.sf.nwrn.Bridging.ReactEmbededHelper
 import java.util.*
 
 class ReactActivity : BaseActivity(), DefaultHardwareBackBtnHandler {
@@ -40,24 +41,11 @@ class ReactActivity : BaseActivity(), DefaultHardwareBackBtnHandler {
         getNavigationView()?.setNavigationItemSelectedListener(this)
         getNavigationView()?.setCheckedItem(getNavigationItemId())
 
-        mReactRootView = ReactRootView(this)
-        mReactInstanceManager = ReactInstanceManager.builder()
-                .setApplication(application)
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModulePath("index")
-                .addPackage(MainReactPackage())
-                .addPackage(NavigationExternalPackage())
-                .setUseDeveloperSupport(BuildConfig.DEBUG)
-                .setInitialLifecycleState(LifecycleState.RESUMED)
-                .build()
-        // The string here (e.g. "MyReactNativeApp") has to match
-        // the string in AppRegistry.registerComponent() in index.js
-        mReactRootView!!.startReactApplication(mReactInstanceManager, "nwrn", null)
-
-        mReactRootView!!.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT)
-        react_container.addView(mReactRootView)
+        mReactInstanceManager = ReactEmbededHelper.getReactInstanceManager(application)
+        mReactInstanceManager.let {
+            mReactRootView = ReactEmbededHelper.getReactRootView(this, it!!, null)
+            react_container.addView(mReactRootView)
+        }
     }
 
     override fun onPause() {
