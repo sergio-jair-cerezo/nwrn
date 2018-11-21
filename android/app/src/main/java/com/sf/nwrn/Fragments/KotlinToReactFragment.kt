@@ -5,9 +5,12 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.sf.nwrn.Activities.KotlinAndReactActivity
 import com.sf.nwrn.R
 import kotlinx.android.synthetic.main.fragment_kotlin_to_react.*
+import org.json.JSONObject
+import java.util.*
 
 class KotlinToReactFragment : Fragment() {
 
@@ -30,6 +33,15 @@ class KotlinToReactFragment : Fragment() {
         joelBundle.putString("value", "10")
         scoresArray.add(joelBundle)
         initialProperties.putParcelableArrayList("scores", scoresArray)
+
+        val scoresString = "{\"scores\":" +
+                    "[" +
+                        "{\"name\":\"Alex\", \"value\":\"42\"}," +
+                        "{\"name\":\"Joel\", \"value\":\"10\"}" +
+                    "]" +
+                "}"
+        val scoresJSON = JSONObject(scoresString)
+        editText.setText(scoresJSON.toString(2), TextView.BufferType.EDITABLE)
 
         btn_go_to_rn.setOnClickListener {
             var transaction = fragmentManager?.beginTransaction()
